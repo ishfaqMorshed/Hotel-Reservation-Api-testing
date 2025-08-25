@@ -1,7 +1,7 @@
-Here's your **updated README.md** with emojis and the requested formatting:
+
 
 ```markdown
-# Hotel Reservation API Testing 🏨💻
+# 🏨 Hotel Reservation API Testing 🏨
 
 This project involves automated **API testing** for the **Hotel Reservation System** using **Postman**, **Newman**, and **Jenkins** for **CI/CD**. The goal is to ensure the API works correctly by running tests on various endpoints for functionality, performance, and edge cases. This repository showcases the integration of **automated testing** and **continuous integration** through **Jenkins**.
 
@@ -9,27 +9,35 @@ This project involves automated **API testing** for the **Hotel Reservation Syst
 
 ## 📁 Project Structure
 
+```
+
 /hotel-reservation-api-testing
 │
-├── /Postman # Postman Collection and Environment
-│ └── BookingApi.json # Postman Collection file 📚
+├── /Documentation                  # Project and API Documentation 📜
+│   └── [API Documentation Link](https://app.swaggerhub.com/apis/ishfak/Booking_API/1.0.0)  # Swagger API Documentation 🌐
 │
-├── /TestCases # Test Cases Documentation
-│ └── test-cases.md # Detailed Test Cases in Markdown 📝
+├── /Postman                        # Postman Collection and Environment
+│   └── BookingApi.json             # Postman Collection file 📚
 │
-├── /Reports # Test Reports
-│ ├── newman-report.html # Newman HTML Report 📑
-│ └── jenkins-report.txt # Jenkins Logs and Test Results 🖥️
+├── /TestCase                       # Test Case Documentation 📝
+│   └── test-cases.md               # Detailed Test Cases in Markdown 📝
 │
-├── README.md # Project Overview and Setup Instructions 📄
-└── .gitignore # Git Ignore file 🚫
+├── /Reports                         # Test Reports
+│   ├── newman-report.html          # Newman HTML Report 📑
+│   └── jenkins-report.txt          # Jenkins Logs and Test Results 🖥️
+│
+├── README.md                       # Project Overview and Setup Instructions 📄
+└── .gitignore                      # Git Ignore file 🚫
+
 ````
 
 ---
 
 ## 📜 API Documentation
 
-API documentation for **Hotel Reservation System** is available through **Swagger** (integrated using SwaggerHub). You can access it [here](https://your_swaggerhub_url).
+For detailed **API documentation** for the **Hotel Reservation System**, please refer to the official SwaggerHub link:
+
+[**API Documentation on SwaggerHub**](https://app.swaggerhub.com/apis/ishfak/Booking_API/1.0.0) 🌐
 
 ### Endpoints:
 
@@ -136,14 +144,6 @@ newman run Postman/BookingApi.json -e Postman/Environment.json -d TestData/testd
 
 ---
 
-## 🎯 Final Result
-
-* **282 missing encounters** were found across thousands of records.
-* **Continuous audit** is now enabled with automated testing.
-* **Dashboard** helps analysts, managers, and QA teams monitor data quality.
-
----
-
 ## 👨‍💻 Author
 
 Developed by **Ishfaq Morshed** for demonstrating **automated API testing** and **Jenkins integration** in a real-world project.
@@ -151,7 +151,5 @@ Developed by **Ishfaq Morshed** for demonstrating **automated API testing** and 
 * **Built using**: Postman 🛠️, Newman 🖥️, Jenkins 🔄, Data-Driven Testing 📊
 
 ---
-
-
 
 
