@@ -1,0 +1,223 @@
+openapi: 3.0.0
+info:
+  title: Booking API
+  description: API for booking hotel reservations.
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/ishfak/Booking_API/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: "{{test_url}}/booking"
+  description: Base URL for the Booking API
+paths:
+  /booking:
+    get:
+      summary: Get Booking ID
+      operationId: getBookingId
+      responses:
+        "200":
+          description: Successfully retrieved booking IDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/inline_response_200"
+    post:
+      summary: Create a Booking
+      operationId: createBooking
+      requestBody:
+        description: Data required to create a new booking
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/booking_body"
+      responses:
+        "200":
+          description: Successfully created a new booking
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/inline_response_200_1"
+  /booking/{bookingid}:
+    get:
+      summary: Get Booking Details
+      operationId: getBookingDetails
+      parameters:
+      - name: bookingid
+        in: path
+        description: The ID of the booking
+        required: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: Successfully retrieved booking details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/inline_response_200_2"
+        "404":
+          description: Booking not found
+    put:
+      summary: Update Booking Details
+      operationId: updateBooking
+      parameters:
+      - name: bookingid
+        in: path
+        description: The ID of the booking to update
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        description: Data to update the booking
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/booking_bookingid_body"
+      responses:
+        "200":
+          description: Successfully updated the booking
+        "400":
+          description: Invalid data provided
+    delete:
+      summary: Delete a Booking
+      operationId: deleteBooking
+      parameters:
+      - name: bookingid
+        in: path
+        description: The ID of the booking to delete
+        required: true
+        schema:
+          type: integer
+      responses:
+        "201":
+          description: Successfully deleted the booking
+    patch:
+      summary: Partial Update for Booking
+      operationId: partialUpdateBooking
+      parameters:
+      - name: bookingid
+        in: path
+        description: The ID of the booking to partially update
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        description: Fields to update in the booking
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/booking_bookingid_body_1"
+      responses:
+        "200":
+          description: Successfully partially updated the booking
+  /auth:
+    post:
+      summary: Generate Token for Authentication
+      operationId: generateToken
+      requestBody:
+        description: Credentials for authentication
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/auth_body"
+      responses:
+        "200":
+          description: Token generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/inline_response_200_3"
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        bookingid:
+          type: integer
+          description: The ID of the booking
+    booking_bookingdates:
+      type: object
+      properties:
+        checkin:
+          type: string
+          format: date
+        checkout:
+          type: string
+          format: date
+    booking_body:
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        totalprice:
+          type: integer
+        depositpaid:
+          type: boolean
+        bookingdates:
+          $ref: "#/components/schemas/booking_bookingdates"
+        additionalneeds:
+          type: string
+    inline_response_200_1:
+      type: object
+      properties:
+        bookingid:
+          type: integer
+          description: The ID of the created booking
+    inline_response_200_2:
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        totalprice:
+          type: integer
+        bookingdates:
+          type: object
+          properties:
+            checkin:
+              type: string
+              format: date
+            checkout:
+              type: string
+              format: date
+    booking_bookingid_body:
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        totalprice:
+          type: integer
+        depositpaid:
+          type: boolean
+        bookingdates:
+          $ref: "#/components/schemas/booking_bookingdates"
+        additionalneeds:
+          type: string
+    booking_bookingid_body_1:
+      type: object
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+    auth_body:
+      type: object
+      properties:
+        username:
+          type: string
+          example: admin
+        password:
+          type: string
+          example: password123
+    inline_response_200_3:
+      type: object
+      properties:
+        token:
+          type: string
+          description: The generated authentication token
