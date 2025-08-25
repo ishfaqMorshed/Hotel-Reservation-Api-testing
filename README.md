@@ -9,25 +9,23 @@ This project involves automated **API testing** for the **Hotel Reservation Syst
 
 ## 📁 Project Structure
 
-```
-
 /hotel-reservation-api-testing
 │
-├── /Documentation                  # Project and API Documentation 📜
-│   └── [API Documentation Link](https://app.swaggerhub.com/apis/ishfak/Booking_API/1.0.0)  # Swagger API Documentation 🌐
+├── /Documentation # Project and API Documentation 📜
+│ └── API Documentation Link # Swagger API Documentation 🌐
 │
-├── /Postman                        # Postman Collection and Environment
-│   └── BookingApi.json             # Postman Collection file 📚
+├── /Postman # Postman Collection and Environment
+│ └── BookingApi.json # Postman Collection file 📚
 │
-├── /TestCase                       # Test Case Documentation 📝
-│   └── test-cases.md               # Detailed Test Cases in Markdown 📝
+├── /TestCase # Test Case Documentation 📝
+│ └── test-cases.md # Detailed Test Cases in Markdown 📝
 │
-├── /Reports                         # Test Reports
-│   ├── newman-report.html          # Newman HTML Report 📑
-│   └── jenkins-report.txt          # Jenkins Logs and Test Results 🖥️
+├── /Reports # Test Reports
+│ ├── newman-report.html # Newman HTML Report 📑
+│ └── jenkins-report.txt # Jenkins Logs and Test Results 🖥️
 │
-├── README.md                       # Project Overview and Setup Instructions 📄
-└── .gitignore                      # Git Ignore file 🚫
+├── README.md # Project Overview and Setup Instructions 📄
+└── .gitignore # Git Ignore file 🚫
 
 ````
 
