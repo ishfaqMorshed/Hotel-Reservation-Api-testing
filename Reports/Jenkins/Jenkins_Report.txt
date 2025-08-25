@@ -1,0 +1,308 @@
+Started by user ishfak eraz
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\BookingApi
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[BookingApi] $ cmd /c call C:\Windows\TEMP\jenkins2448316753991700036.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\BookingApi>"E:\SQA works\jenkinsjob.bat"
+
+C:\ProgramData\Jenkins\.jenkins\workspace\BookingApi>"C:\Users\Administrator\AppData\Roaming\npm\newman.cmd" run --disable-unicode "E:\\SQA works\\BookingApi.json" -e "E:\\SQA works\\Environment.json" -d "E:\\SQA works\\testdata.json" --reporters=cli,htmlextra --reporter-htmlextra-export "Reports\\jenkins-report.html" 
+newman
+
+Booking API
+
+Iteration 1/5
+
+Folder Positive Endpoints
+Sub-folder Get Booking Id's
+  GET https://restful-booker.herokuapp.com/booking [200 OK, 72.47kB, 3.2s]
+  Pass  Verify Status code is 200
+
+Sub-folder Create Booking
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 944B, 283ms]
+  Pass  Verify Status code is 200
+  Pass  Verify firstname
+  Pass  Verify lastname
+
+Sub-folder Get Booking Details
+  GET https://restful-booker.herokuapp.com/booking/5575 [200 OK, 911B, 469ms]
+  Pass  Status code is 200
+  Pass  Response body should be valid JSON
+  Pass  Parse JSON and check total price
+  Pass  Response time is less than 500ms
+  Pass  Verify firstname
+  Pass  Verify lastname
+  Pass  Checkin date should match the actual response value
+  Pass  Checkout date should match the actual response value
+
+Sub-folder Token Generator
+  POST https://restful-booker.herokuapp.com/auth [200 OK, 766B, 730ms]
+
+Sub-folder Update Booking Details
+  PUT https://restful-booker.herokuapp.com/booking/5575 [200 OK, 918B, 287ms]
+
+Sub-folder Partial Update
+  PATCH https://restful-booker.herokuapp.com/booking/5575 [200 OK, 925B, 719ms]
+
+Sub-folder Delete Booking
+  DELETE https://restful-booker.herokuapp.com/booking/5575 [201 Created, 751B, 284ms]
+
+Sub-folder Curl Command
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 948B, 278ms]
+
+Folder Negetive Endpoints
+Sub-folder Get Booking Details invalid id
+  GET https://restful-booker.herokuapp.com/booking/7878 [404 Not Found, 755B, 285ms]
+
+Sub-folder Create Booking Invalid Char
+  POST https://restful-booker.herokuapp.com/booking [400 Bad Request, 760B, 276ms]
+  1⠄ JSONError in test-script
+
+Iteration 2/5
+
+Folder Positive Endpoints
+Sub-folder Get Booking Id's
+  GET https://restful-booker.herokuapp.com/booking [200 OK, 73.18kB, 653ms]
+  Pass  Verify Status code is 200
+
+Sub-folder Create Booking
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 943B, 277ms]
+  Pass  Verify Status code is 200
+  Pass  Verify firstname
+  Pass  Verify lastname
+
+Sub-folder Get Booking Details
+  GET https://restful-booker.herokuapp.com/booking/5618 [200 OK, 914B, 279ms]
+  Pass  Status code is 200
+  Pass  Response body should be valid JSON
+  Pass  Parse JSON and check total price
+  Pass  Response time is less than 500ms
+  Pass  Verify firstname
+  Pass  Verify lastname
+  Pass  Checkin date should match the actual response value
+  Pass  Checkout date should match the actual response value
+
+Sub-folder Token Generator
+  POST https://restful-booker.herokuapp.com/auth [200 OK, 770B, 573ms]
+
+Sub-folder Update Booking Details
+  PUT https://restful-booker.herokuapp.com/booking/5618 [200 OK, 922B, 284ms]
+
+Sub-folder Partial Update
+  PATCH https://restful-booker.herokuapp.com/booking/5618 [200 OK, 917B, 834ms]
+
+Sub-folder Delete Booking
+  DELETE https://restful-booker.herokuapp.com/booking/5618 [201 Created, 743B, 289ms]
+
+Sub-folder Curl Command
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 948B, 281ms]
+
+Folder Negetive Endpoints
+Sub-folder Get Booking Details invalid id
+  GET https://restful-booker.herokuapp.com/booking/7878 [404 Not Found, 755B, 283ms]
+
+Sub-folder Create Booking Invalid Char
+  POST https://restful-booker.herokuapp.com/booking [400 Bad Request, 760B, 280ms]
+  2⠄ JSONError in test-script
+
+Iteration 3/5
+
+Folder Positive Endpoints
+Sub-folder Get Booking Id's
+  GET https://restful-booker.herokuapp.com/booking [200 OK, 931B, 4.2s]
+  Pass  Verify Status code is 200
+
+Sub-folder Create Booking
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 945B, 279ms]
+  Pass  Verify Status code is 200
+  Pass  Verify firstname
+  Pass  Verify lastname
+
+Sub-folder Get Booking Details
+  GET https://restful-booker.herokuapp.com/booking/12 [200 OK, 918B, 279ms]
+  Pass  Status code is 200
+  Pass  Response body should be valid JSON
+  Pass  Parse JSON and check total price
+  Pass  Response time is less than 500ms
+  Pass  Verify firstname
+  Pass  Verify lastname
+  Pass  Checkin date should match the actual response value
+  Pass  Checkout date should match the actual response value
+
+Sub-folder Token Generator
+  POST https://restful-booker.herokuapp.com/auth [200 OK, 774B, 451ms]
+
+Sub-folder Update Booking Details
+  PUT https://restful-booker.herokuapp.com/booking/12 [200 OK, 926B, 278ms]
+
+Sub-folder Partial Update
+  PATCH https://restful-booker.herokuapp.com/booking/12 [200 OK, 925B, 277ms]
+
+Sub-folder Delete Booking
+  DELETE https://restful-booker.herokuapp.com/booking/12 [201 Created, 751B, 278ms]
+
+Sub-folder Curl Command
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 946B, 279ms]
+
+Folder Negetive Endpoints
+Sub-folder Get Booking Details invalid id
+  GET https://restful-booker.herokuapp.com/booking/7878 [404 Not Found, 751B, 311ms]
+
+Sub-folder Create Booking Invalid Char
+  POST https://restful-booker.herokuapp.com/booking [400 Bad Request, 756B, 279ms]
+  3⠄ JSONError in test-script
+
+Iteration 4/5
+
+Folder Positive Endpoints
+Sub-folder Get Booking Id's
+  GET https://restful-booker.herokuapp.com/booking [200 OK, 1.71kB, 279ms]
+  Pass  Verify Status code is 200
+
+Sub-folder Create Booking
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 941B, 421ms]
+  Pass  Verify Status code is 200
+  Pass  Verify firstname
+  Pass  Verify lastname
+
+Sub-folder Get Booking Details
+  GET https://restful-booker.herokuapp.com/booking/70 [200 OK, 914B, 283ms]
+  Pass  Status code is 200
+  Pass  Response body should be valid JSON
+  Pass  Parse JSON and check total price
+  Pass  Response time is less than 500ms
+  Pass  Verify firstname
+  Pass  Verify lastname
+  Pass  Checkin date should match the actual response value
+  Pass  Checkout date should match the actual response value
+
+Sub-folder Token Generator
+  POST https://restful-booker.herokuapp.com/auth [200 OK, 766B, 420ms]
+
+Sub-folder Update Booking Details
+  PUT https://restful-booker.herokuapp.com/booking/70 [200 OK, 918B, 277ms]
+
+Sub-folder Partial Update
+  PATCH https://restful-booker.herokuapp.com/booking/70 [200 OK, 925B, 278ms]
+
+Sub-folder Delete Booking
+  DELETE https://restful-booker.herokuapp.com/booking/70 [201 Created, 751B, 406ms]
+
+Sub-folder Curl Command
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 939B, 670ms]
+
+Folder Negetive Endpoints
+Sub-folder Get Booking Details invalid id
+  GET https://restful-booker.herokuapp.com/booking/7878 [404 Not Found, 747B, 406ms]
+
+Sub-folder Create Booking Invalid Char
+  POST https://restful-booker.herokuapp.com/booking [400 Bad Request, 760B, 281ms]
+  4⠄ JSONError in test-script
+
+Iteration 5/5
+
+Folder Positive Endpoints
+Sub-folder Get Booking Id's
+  GET https://restful-booker.herokuapp.com/booking [200 OK, 2.32kB, 405ms]
+  Pass  Verify Status code is 200
+
+Sub-folder Create Booking
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 956B, 278ms]
+  Pass  Verify Status code is 200
+  Pass  Verify firstname
+  Pass  Verify lastname
+
+Sub-folder Get Booking Details
+  GET https://restful-booker.herokuapp.com/booking/121 [200 OK, 920B, 342ms]
+  Pass  Status code is 200
+  Pass  Response body should be valid JSON
+  Pass  Parse JSON and check total price
+  Pass  Response time is less than 500ms
+  Pass  Verify firstname
+  Pass  Verify lastname
+  Pass  Checkin date should match the actual response value
+  Pass  Checkout date should match the actual response value
+
+Sub-folder Token Generator
+  POST https://restful-booker.herokuapp.com/auth [200 OK, 766B, 405ms]
+
+Sub-folder Update Booking Details
+  PUT https://restful-booker.herokuapp.com/booking/121 [200 OK, 918B, 308ms]
+
+Sub-folder Partial Update
+  PATCH https://restful-booker.herokuapp.com/booking/121 [200 OK, 917B, 528ms]
+
+Sub-folder Delete Booking
+  DELETE https://restful-booker.herokuapp.com/booking/121 [201 Created, 743B, 275ms]
+
+Sub-folder Curl Command
+  POST https://restful-booker.herokuapp.com/booking [200 OK, 947B, 779ms]
+
+Folder Negetive Endpoints
+Sub-folder Get Booking Details invalid id
+  GET https://restful-booker.herokuapp.com/booking/7878 [404 Not Found, 755B, 277ms]
+
+Sub-folder Create Booking Invalid Char
+  POST https://restful-booker.herokuapp.com/booking [400 Bad Request, 760B, 277ms]
+  5⠄ JSONError in test-script
+
+---------------------------------------------------------------------
+|                         |           executed |             failed |
+--------------------------+--------------------+---------------------
+|              iterations |                  5 |                  0 |
+--------------------------+--------------------+---------------------
+|                requests |                 50 |                  0 |
+--------------------------+--------------------+---------------------
+|            test-scripts |                 25 |                  5 |
+--------------------------+--------------------+---------------------
+|      prerequest-scripts |                 10 |                  0 |
+--------------------------+--------------------+---------------------
+|              assertions |                 60 |                  0 |
+---------------------------------------------------------------------
+| total run duration: 29.5s                                         |
+---------------------------------------------------------------------
+| total data received: 151.77kB (approx)                            |
+---------------------------------------------------------------------
+| average response time: 509ms [min: 275ms, max: 4.2s, s.d.: 688ms] |
+---------------------------------------------------------------------
+
+[31m  # [39m[31m failure      [39m[31m detail                                                    [39m
+[90m    [39m[90m              [39m[90m                                                           [39m
+ 1.  JSONError                                                               
+     iteration: 1  Unexpected token 'B' at 1:1                               
+                   Bad Request                                               
+                   ^                                                         
+                   at test-script                                            
+                   inside "Negetive Endpoints / Create Booking Invalid Char" 
+[90m    [39m[90m              [39m[90m                                                           [39m
+ 2.  JSONError                                                               
+     iteration: 2  Unexpected token 'B' at 1:1                               
+                   Bad Request                                               
+                   ^                                                         
+                   at test-script                                            
+                   inside "Negetive Endpoints / Create Booking Invalid Char" 
+[90m    [39m[90m              [39m[90m                                                           [39m
+ 3.  JSONError                                                               
+     iteration: 3  Unexpected token 'B' at 1:1                               
+                   Bad Request                                               
+                   ^                                                         
+                   at test-script                                            
+                   inside "Negetive Endpoints / Create Booking Invalid Char" 
+[90m    [39m[90m              [39m[90m                                                           [39m
+ 4.  JSONError                                                               
+     iteration: 4  Unexpected token 'B' at 1:1                               
+                   Bad Request                                               
+                   ^                                                         
+                   at test-script                                            
+                   inside "Negetive Endpoints / Create Booking Invalid Char" 
+[90m    [39m[90m              [39m[90m                                                           [39m
+ 5.  JSONError                                                               
+     iteration: 5  Unexpected token 'B' at 1:1                               
+                   Bad Request                                               
+                   ^                                                         
+                   at test-script                                            
+                   inside "Negetive Endpoints / Create Booking Invalid Char" 
+Build step 'Execute Windows batch command' marked build as failure
+Finished: FAILURE
